@@ -1,35 +1,21 @@
-`
-   Flask tutorials with some mysql perks 
-`
+`Flask tutorials with some mysql perks `
 
 #Install  Flask
 
-`
-	pip install Flask
-	
-`
+`pip install Flask`
 
 #install  mysql connector for your python 
 
-`
-pip install mysql-connector-python
-
-`
+`pip install mysql-connector-python`
 
 
 
 #  Create Mysql 
 
-`
-create user 'kekz'@'localhost' identified  by '123456';
-
-`
+`create user 'kekz'@'localhost' identified  by '123456';`
 
 #Grant all privileges to your newly created user  
 
-`
-grant all privileges on *.* to 'kekz'@'localhost';
+`grant all privileges on *.* to 'kekz'@'localhost';
 
-done ....
-
-`
+done ....`
