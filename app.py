@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import g
+from flask import g, render_template
 import db as MySQL
 
 #kekq = MySQL.fetch()
@@ -27,6 +27,11 @@ def check_authentication():
 @app.route("/")
 def Main():
 	return f'test  {g.xzzz}'
+
+
+@app.route("/xz")
+def Main2():
+	return render_template("main.html")
 
 
 #print(__name__)
