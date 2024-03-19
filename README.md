@@ -14,7 +14,8 @@
 #  Create Mysql 
 
 
-#create new user
+#create new user 
+
 `create user 'kekz'@'localhost' identified  by '123456';`
 
 #Grant all privileges to your newly created user  
