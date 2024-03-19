@@ -17,6 +17,4 @@
 
 #Grant all privileges to your newly created user  
 
-`grant all privileges on *.* to 'kekz'@'localhost';
-
-done ....`
+`grant all privileges on *.* to 'kekz'@'localhost';`
