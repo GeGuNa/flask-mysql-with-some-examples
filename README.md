@@ -1,4 +1,5 @@
-`Flask tutorials with some mysql perks `
+#Flask tutorials with some mysql perks 
+
 
 #Install  Flask
 
