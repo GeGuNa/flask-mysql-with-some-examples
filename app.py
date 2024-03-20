@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import g, render_template
 import db as MySQL
+import functions
 
 #kekq = MySQL.fetch()
 
@@ -14,6 +15,12 @@ import db as MySQL
 #q1 = MySQL.fetchOne("select * from user where id = %s", (7,))
 
 #print(q1)
+
+
+#functions.escape("ahaha \\ ")
+#print(functions.escape("ahaha \\ "))
+
+
 
 app = Flask(__name__)
 

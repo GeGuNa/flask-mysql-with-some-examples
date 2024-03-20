@@ -24,8 +24,9 @@ def escape(text: str):
 	for x,y in REPLACEMENTS:
 		text = text.replace(x,y)
 	
-	print(text)
+	return text
+	#print(text)
 	
 
 
-escape("test '   \" ")
+#escape("test '   \" ")
