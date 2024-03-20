@@ -34,6 +34,13 @@ def check_authentication():
 def mmai2n():
 	return render_template("home.html")
 	
+	
+	
+@app.route("/login", methods=['GET'])
+def login():
+	return render_template("login.html")
+		
+	
 
 @app.route("/q21")
 def Mainq():
