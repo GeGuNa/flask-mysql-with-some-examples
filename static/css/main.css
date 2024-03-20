@@ -1,0 +1,58 @@
+body {
+font-size:16px;
+margin:0 !important;
+padding:0 !important;
+}
+
+.header {
+	padding: 12px 10px;
+    display: flex;
+    gap: 15px;
+    background-color: rgb(74, 133, 165);
+}
+
+.header > div a {
+color: #fff !important;
+}
+
+
+a {
+text-decoration: none;
+}
+
+
+
+.link, .link:hover {
+    color: #33658E;
+}
+
+
+.cflex1 {
+	display:flex;
+	widtH:100%;
+	flex-wrap:nowrap;
+	gap:20px;
+}
+
+.justify_cend {
+    justify-content: end;
+    justify-content: flex-end;
+}
+
+
+
+.button {
+	outline: none  !important;
+    border: 0 !important;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 10px;
+    color: #FFF;
+    background-color: rgb(74, 133, 165);
+}
+
+
+.centerization {
+    align-items: center;
+}

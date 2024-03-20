@@ -30,9 +30,13 @@ def check_authentication():
 	g.xzzz = "klekz"
 
 
+@app.route("/", methods=['GET'])
+def mmai2n():
+	return render_template("home.html")
+	
 
-@app.route("/")
-def Main():
+@app.route("/q21")
+def Mainq():
 	return f'test  {g.xzzz}'
 
 
@@ -46,6 +50,7 @@ def Main2():
 @app.route("/user/<int:id>")
 def user_id(id):
     return f"{id}"
+
 
 ##url doesn't matter 
 @app.route("/user_id/<id>")
