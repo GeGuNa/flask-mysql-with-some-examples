@@ -41,6 +41,18 @@ def Main2():
 	return render_template("main.html")
 
 
+
+#allowing only integers
+@app.route("/user/<int:id>")
+def user_id(id):
+    return f"{id}"
+
+##url doesn't matter 
+@app.route("/user_id/<id>")
+def user_with_jstid(id):
+    return f"{id}"
+
+
 #print(__name__)
 
 #if __name__ == '__main__':
