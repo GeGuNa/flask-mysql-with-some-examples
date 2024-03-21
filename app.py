@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask import g, render_template
 import db as MySQL
 import functions
@@ -28,7 +28,9 @@ app = Flask(__name__)
 @app.before_request
 def check_authentication():
 	g.xzzz = "klekz"
-
+	print(request.endpoint)
+	
+	
 
 @app.route("/", methods=['GET'])
 def mmai2n():
@@ -39,7 +41,11 @@ def mmai2n():
 @app.route("/login", methods=['GET'])
 def login():
 	return render_template("login.html")
-		
+
+@app.route("/register", methods=['GET'])
+def registration_2():
+	return render_template("register.html")
+			
 	
 
 @app.route("/q21")

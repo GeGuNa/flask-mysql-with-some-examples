@@ -1,13 +1,10 @@
 {% extends 'main.html' %}
 
 
-{% block title %} Authorization {% endblock %}
+{% block title %} Registration {% endblock %}
 
 
 {% block main %}
-
-	
-
 
 
 
@@ -22,17 +19,22 @@
 
             <div class="col-sm-4 col-sm-push-4 centerBlock">
 
-                <div class="contTitle">Login</div>
+
+
+                <div class="fmTop35"></div>
+                
 
                 <div class="prodWrapper">
 
-                    <form action="" method="post">
+     
+     
+   <form actiogn="" method="post">
 
                         <div class="form-group">
 
                             <label for="email">Email:</label>
 
-                            <input class="form-control" type="text" name="username" required="">
+                            <input class="form-control" type="email" name="username" required="">
 
                         </div>
 
@@ -44,13 +46,23 @@
 
                         </div>
 
-                        <div class="fmTop15">
+                        <div class="form-group">
 
-                            <button type="submit" class="button">Sign in</button>
+                            <label for="pwd">Retype password:</label>
+
+                            <input class="form-control" type="password" name="password2" required="">
 
                         </div>
 
-                    </form>
+                        <button type="submit" class="button">Register</button>
+
+                    </form>  
+     
+     
+     
+     
+     
+     
 <br/>
                     <a  href="#">Password recovery</a>
 
