@@ -37,9 +37,37 @@ def fetchOne(select: str, data):
 	
 	
 	return data	
-	
+
+
+def insertInto(table: str, columns, data):
+    sql = "INSERT INTO {0} ({1}) VALUES (".format(table, ",".join(columns))
+    sql += ", ".join(["%s"] * len(columns))
+    sql += ") "
+    awww_Data = tuple(data)
+    
+    mycursor = mydb.cursor()
+    
+    mycursor.execute(sql, awww_Data)
+    mydb.commit()
+    
+    print(mycursor.rowcount, "record inserted.")
+    
+    mycursor.close()
+    mydb.close()
+
+
+
+
+#Table = "user"
+#Columns = ['name','surname','added_time']
+#Data = ['abuhuhqwe_123', 'qwe_11',12412313]
+
+#insertInto(Table, Columns, Data)
 
 #print(mydb)
+
+
+
 
 
 
