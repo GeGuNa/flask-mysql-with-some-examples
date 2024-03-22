@@ -58,6 +58,26 @@ def insertInto(table: str, columns, data):
 
 
 
+def deteleFrom(table, column, uid):
+
+
+    
+    mycursor = mydb.cursor()
+    
+    
+    Tlq1 = f"delete from {table} where {column} = {uid}"
+    
+    mycursor.execute(Tlq1)
+    mydb.commit()
+    
+    mycursor.close()
+    mydb.close()
+
+
+
+
+
+
 #Table = "user"
 #Columns = ['name','surname','added_time']
 #Data = ['abuhuhqwe_123', 'qwe_11',12412313]
