@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask import g, render_template
 import db as MySQL
 import functions
+import sec
 
 #kekq = MySQL.fetch()
 
@@ -23,6 +24,13 @@ import functions
 
 
 app = Flask(__name__)
+app.register_blueprint(sec.app)
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return 'This page does not exist', 404
+
 
 
 @app.before_request
