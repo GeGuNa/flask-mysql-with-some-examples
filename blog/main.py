@@ -1,8 +1,7 @@
-from flask import Blueprint
+from flask import Blueprint, abort
 from flask import  render_template
 
 app2Blg2 = Blueprint("hop_hip_bux", __name__, template_folder = "templates")
-
 
 
 @app2Blg2.route("/blog/", methods=["GET"])
