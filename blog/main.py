@@ -19,3 +19,7 @@ def FromTheBlogPost(uid):
 def FromTheBlogPostEditing(uid):
 	return f"blog editing {uid}"
 	
+
+@app2Blg2.route("/blog/post/<int:uid>/delete", methods=["GET"])
+def FromTheBlogPostDelete(uid):
+	return f"deleting the blog {uid}"
