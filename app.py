@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 from flask import g, render_template
 import db as MySQL
 import functions
@@ -63,7 +63,22 @@ def login():
 @app.route("/register", methods=['GET'])
 def registration_2():
 	return render_template("register.html")
-			
+
+
+@app.route("/apartment/<int:uid>", methods=['GET'])
+def apartment_id(uid):
+	
+	tabl = "blog"
+	col = "uid"
+	uid2 = (uid)
+
+	data = MySQL.fetchOneFromSpecific(tabl, col, uid2)
+	
+	if data is None:
+		return redirect("/")
+	
+	return f" {data}"
+	#return render_template("register.html")		
 	
 
 @app.route("/q21")
