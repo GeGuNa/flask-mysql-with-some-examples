@@ -8,7 +8,7 @@ app23z = Blueprint("q_contact", __name__, template_folder="templates")
 @app23z.route("/page/contact/", methods=["GET"])
 def ForContactPage():
 	try:
-		return render_template("contact/main.html2")
+		return render_template("contact/main.html")
 	except TemplateNotFound:
 		#abort(404)
 		qp123 = make_response("some problems kiddo")
