@@ -14,3 +14,8 @@ def FromTheBlog():
 def FromTheBlogPost(uid):
 	return f"blog id {uid}"
 	
+	
+@app2Blg2.route("/blog/post/<int:uid>/edit", methods=["GET"])
+def FromTheBlogPostEditing(uid):
+	return f"blog editing {uid}"
+	
