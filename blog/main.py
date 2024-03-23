@@ -1,10 +1,16 @@
 from flask import Blueprint
 
 
-app2Blg2 = Blueprint("hop_hip_bux", __name__, template_folder = "template")
+app2Blg2 = Blueprint("hop_hip_bux", __name__, template_folder = "templates")
 
 
 
-@app2Blg2.route("/yoo_blog/", methods=["GET"])
+@app2Blg2.route("/blog/", methods=["GET"])
 def FromTheBlog():
-	return "Xz  from the blogpage"
+	return "main blogs"
+
+
+@app2Blg2.route("/blog/post/<int:uid>", methods=["GET"])
+def FromTheBlogPost(uid):
+	return f"blog id {uid}"
+	
