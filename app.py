@@ -3,9 +3,14 @@ from flask import g, render_template
 import db as MySQL
 import functions
 import sec
+from aww import awwqw
+from blog.main import app2Blg2
+
 
 #kekq = MySQL.fetch()
 
+
+print(awwqw())
 
 #print(kekq[0])
 #print(kekq[0][0])
@@ -25,7 +30,7 @@ import sec
 
 app = Flask(__name__)
 app.register_blueprint(sec.app)
-
+app.register_blueprint(app2Blg2)
 
 @app.errorhandler(404)
 def page_not_found(error):
