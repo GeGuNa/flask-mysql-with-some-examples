@@ -5,7 +5,7 @@ import functions
 import sec
 from aww import awwqw
 from blog.main import app2Blg2
-
+from contact.main import app23z
 
 #kekq = MySQL.fetch()
 
@@ -31,6 +31,11 @@ print(awwqw())
 app = Flask(__name__)
 app.register_blueprint(sec.app)
 app.register_blueprint(app2Blg2)
+app.register_blueprint(app23z)
+
+
+
+
 
 @app.errorhandler(404)
 def page_not_found(error):
