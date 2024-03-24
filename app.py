@@ -79,6 +79,11 @@ def apartment_id(uid):
 	
 	return f" {data}"
 	#return render_template("register.html")		
+
+@app.route("/about")
+def About_m():
+	return render_template("about/main.html")
+
 	
 
 @app.route("/q21")
