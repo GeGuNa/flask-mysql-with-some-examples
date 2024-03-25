@@ -189,3 +189,37 @@ object-fit: cover;
 .fnt16 {
 font-size: 16px;
 }
+
+.mm_Frm_top20{
+margin-top:20px;
+}
+
+.Form1 {
+    padding: 12px 10px;
+    background-color: rgb(74, 133, 165);
+    border-radius:10px;
+    color:#fff;
+}
+
+input {
+outline:none !important;
+}
+
+
+#forms label {
+	display:block;
+	padding-bottom: 4px;
+}
+
+
+#forms input {
+border:0;
+padding:8px 12px;
+}
+
+
+
+.btn2_new {
+color: #000 !important;
+background-color: rgb(255 255 255) !important;
+}
