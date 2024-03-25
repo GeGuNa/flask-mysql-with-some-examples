@@ -157,14 +157,24 @@
 			<h5>Newly posted</h5>
 		</div>
 		
-		<div class="row">
+		<div class="row gapsBtwrows">
 		
 		
 		{% for xz in Ford %}
 		
 			<div class="col-3">
 				<div><img class="img" src="{{xz.pic}}"/></div>
-				<div>{{xz.name}}</div>
+				
+				<div class="mkbrbottoms pdn10">
+					<div>{{xz.name}}</div>
+					<div>Tbilisi & Batumi</div>
+					<div class="kfi1">
+						<div class="fleft">118km</div>
+						<div class="fright"> 150$</div>
+					</div>
+				</div>
+				
+				
 			</div>
 		
 		{% endfor %}

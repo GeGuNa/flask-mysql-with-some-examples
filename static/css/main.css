@@ -229,3 +229,32 @@ background-color: rgb(255 255 255) !important;
 .img {
 width:100%;
 }
+
+
+body {
+background: #e2e2e2!important;
+}
+
+
+.gapsBtwrows {
+    row-gap: 20px;
+}
+
+
+.mkbrbottoms {
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+.kfi1 {
+	display: inline-block;
+    width: 100%;
+}
+
+.fleft { float:left; }
+.fright { float:right; }
+
+
+.pdn10 {
+    padding: 10px;
+}
