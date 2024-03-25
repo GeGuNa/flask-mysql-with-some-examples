@@ -114,7 +114,67 @@
 			</div>	
 				
 				
+				
+				
+
+				
+				
+				
+				
 			</div>
+		
+		
+		
+			
+		<!-- -->
+		
+		<div style="margin-top:30px;">
+			<h5>VIP Advertisements</h5>
+		</div>
+		
+		<div class="row">
+		
+		
+		{% for x in Data %}
+		
+			<div class="col-3">
+				<div><img class="img" src="{{x.pic}}"/></div>
+				<div>{{x.name}}</div>
+			</div>
+		
+		{% endfor %}
+			
+			
+		
+		</div>		
+				
+		<!-- -->		
+					
+		
+			<!-- -->
+		
+		<div style="margin-top:30px;">
+			<h5>Newly posted</h5>
+		</div>
+		
+		<div class="row">
+		
+		
+		{% for xz in Ford %}
+		
+			<div class="col-3">
+				<div><img class="img" src="{{xz.pic}}"/></div>
+				<div>{{xz.name}}</div>
+			</div>
+		
+		{% endfor %}
+			
+			
+		
+		</div>		
+				
+		<!-- -->		
+		
 		
 		
 	</div>
