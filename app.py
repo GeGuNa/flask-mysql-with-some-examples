@@ -84,6 +84,29 @@ def apartment_id(uid):
 def About_m():
 	return render_template("about/main.html")
 
+
+
+@app.route("/faq")
+def Faq_main():
+	return "faq"
+
+	
+@app.route("/services")
+def Services_main():
+	return "services"
+
+
+@app.route("/partners_2/")
+def Partners_main():
+	return "Partners"	
+
+
+@app.route("/pass_recovery/")
+def Pass_rec_main():
+	return render_template("user/recovery/main.html")	
+
+
+
 	
 
 @app.route("/q21")
