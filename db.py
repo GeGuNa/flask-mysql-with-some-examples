@@ -1,11 +1,78 @@
-import mysql.connector
+import mysql.connector.pooling
+#import mysql.connector.pooling
 
+"""
 mydb = mysql.connector.connect(
   host="localhost",
   user="kekz",
   password="123456",
   database="qwerty"
 )
+"""
+
+db_conf = {
+  "host":"localhost",
+  "user":"kekz",
+  "password":"123456",
+  "database":"qwerty"
+}
+
+
+mysql = mysql.connector.pooling.MySQLConnectionPool(pool_name = "mypool", pool_size = 5, **db_conf)
+
+#mysql = mysql.connector.MySQLConnection(pool_name = "mypool",pool_size = 5,**db_conf)
+
+
+#def mysql_query(connection,query):
+"""
+def mysql_query(query, params=None, executing="execution"): 
+    cursor = mydb.cursor()
+    
+    cursor.execute(query, params)
+    data = cursor.fetchone()
+
+    print(data)
+
+    if executing != "execution":
+	mydb.commit()
+    
+
+        #cursor.close()
+
+    return data
+"""
+
+
+def mysql_query(query, params=None, executing="z"): 
+    """    
+
+    cursor = mydb.cursor()
+   
+
+    #if params is None:
+    #if params != None:
+    if params is not None:
+     cursor.execute(query, params)
+    else:
+     cursor.execute(query)
+
+
+    data = cursor.fetchone()
+
+    print(data)
+
+    if executing != "z":
+     mydb.commit()
+     
+    mydb.close()
+
+    cursor.close()
+    """
+
+#data_1 = "select * from `user` where `id` = %s and `username` = %s"
+#val = (12,'FoLLeN')
+#qqq_1 = mysql_query(query=data_1, params=val)
+#print(qqq_1)
 
 
 def fetch():
@@ -37,6 +104,45 @@ def fetchOne(select: str, data):
 	
 	
 	return data	
+
+
+
+
+def improved_mysql_query(query, params=None, fetchall=False):
+
+    cursor = None
+
+    connection_object = mysql.get_connection()
+
+
+
+    try:
+        cursor = connection_object.cursor()
+        cursor.execute(query,params)
+
+        if fetchall:
+            data = cursor.fetchall()
+        else:
+            data = cursor.fetchone()
+
+        return data
+
+    except Error as e:
+        print(f"Error executing query: {err}")
+        raise 
+
+    finally:
+     if cursor:
+       cursor.close()
+     if mysql:
+       connection_object.close()
+
+
+
+
+
+
+
 
 
 
