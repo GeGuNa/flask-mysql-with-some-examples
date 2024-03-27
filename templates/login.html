@@ -22,11 +22,21 @@
 
             <div class="col-sm-4 col-sm-push-4 centerBlock">
 
+					{% if Data.method == "post" %}
+						
+						{{ Data.arr['user'] }}
+						
+					{% endif %}
+
+
+
+
+
                 <div class="contTitle">Login</div>
 
                 <div class="prodWrapper">
 
-                    <form action="" method="post">
+                    <form action="?" method="post">
 
                         <div class="form-group">
 

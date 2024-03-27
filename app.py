@@ -77,10 +77,37 @@ def mmai2n():
 	
 	
 	
-@app.route("/login", methods=['GET'])
+@app.route("/login", methods=['GET','POST'])
 def login():
-	return render_template("login.html")
-
+	
+	if request.method == "POST":
+		
+		USr_id = request.form['user']
+		USr_ps = request.form['pass']
+		
+		data = {
+				'method':'post', 
+				'arr': {
+					'user':'test',
+					'pass': '12345'
+				}
+				} 
+	else:
+		data = {
+			'method':'get'
+		}  
+	
+	
+	print(data)
+		
+	#if data.method == "get":	
+	
+	return render_template("login.html", Data = data)
+	
+	#else
+		#return render_template("login.html")
+		
+		
 
 @app.route("/register", methods=['GET'])
 def registration_2():
