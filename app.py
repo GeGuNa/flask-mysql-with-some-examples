@@ -76,7 +76,7 @@ def check_authentication():
 		#var_q  = improved_mysql_query("select * from user where id = 12",fetchall=False)
 		
 		#print("qweqwe")
-		print(f" usrdaTa = {g.usrdaTa}  ")
+		#print(f" usrdaTa = {g.usrdaTa}  ")
 		
 		
 		
@@ -92,7 +92,7 @@ def check_authentication():
 @app.before_request
 def KZzzzqwqeq():
 	"""print(g.xzzz)"""
-	print (f" usr= {session['uid_nm']}   pswd = {session['pswd']}")
+	#print (f" usr= {session['uid_nm']}   pswd = {session['pswd']}")
 
 
 
@@ -145,12 +145,12 @@ def login():
 		"""
 		
 		
-		var_siqifex = functions.FforCheckuSerCredentials(USr_id,USr_ps)
+		var_siqifex = functions.FforCheckuSerCredentials(USr_id,USr_ps, type_1="return")
 		
 		if var_siqifex != None:
 				
 			session['uid_nm'] = USr_id
-			session['pswd'] =	USr_ps
+			session['pswd'] = USr_ps
 			
 			return redirect("/")
 			

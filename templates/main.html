@@ -42,8 +42,12 @@
 
 	<div class="col-7">
 		<div class="cflex1 justify_cend">
+			{% if not g.usrdaTa %}
 			<button class="button">Login</button>
 			<button class="button">Sign up</button>
+			{% else %}
+				<button class="button">{{g.usrdaTa[5]}}</button>
+			{% endif %}
 		</div>
 	</div>
 

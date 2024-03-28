@@ -39,7 +39,7 @@ def FforCheckuSerCredentials(username, password, type_1="no_return"):
 	
 
 
-		dd_si1 = (session['uid_nm'], session['pswd'])
+		#dd_si1 = (session['uid_nm'], session['pswd'])
 		
 		dd_si1 = (username, password)
 		
@@ -51,6 +51,7 @@ def FforCheckuSerCredentials(username, password, type_1="no_return"):
 		if type_1 == "no_return":
 			""" """
 		else:
+			#print("kekz")
 			return result
 	
 
