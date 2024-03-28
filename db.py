@@ -105,7 +105,7 @@ def fetchOne(select: str, data):
 	
 	return data	
 
-
+    
 
 
 def improved_mysql_query(query, params=None, fetchall=False):

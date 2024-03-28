@@ -189,9 +189,13 @@ def apartment_id(uid):
 	
 	tabl = "blog"
 	col = "uid"
-	uid2 = (uid)
+	uid2 = (uid,)
 
-	data = MySQL.fetchOneFromSpecific(tabl, col, uid2)
+	#data = MySQL.fetchOneFromSpecific(tabl, col, uid2)
+	
+	
+	data = improved_mysql_query("select * from `apartments`  where `uid` = %s", uid2, fetchall=False)
+	
 	
 	if data is None:
 		return redirect("/")
