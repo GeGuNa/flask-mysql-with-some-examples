@@ -1,4 +1,4 @@
-import mysql.connector.pooling
+import mysql.connector.pooling 
 #import mysql.connector.pooling
 
 """
@@ -127,7 +127,7 @@ def improved_mysql_query(query, params=None, fetchall=False):
 
         return data
 
-    except Error as e:
+    except TypeError as err:
         print(f"Error executing query: {err}")
         raise 
 
@@ -138,6 +138,50 @@ def improved_mysql_query(query, params=None, fetchall=False):
        connection_object.close()
 
 
+
+def executemany(sql, args, commit=False):
+    """
+        Doesn't need to be explained i think
+    """
+    conn = mysql.get_connection()
+    cursor = conn.cursor()
+    cursor.executemany(sql, args)
+    
+    if commit is True:
+        conn.commit()
+        connection_object.close()
+        return None
+    else:
+        res = cursor.fetchall()
+        connection_object.close()
+        return res
+
+def mysql_query_commit(query, params=None, ret=False):
+
+    cursor = None
+
+    connection_object = mysql.get_connection()
+
+
+    try:
+        cursor = connection_object.cursor()
+        cursor.execute(query,params)
+        connection_object.commit()
+		
+		
+        if ret:
+            data = cursor.fetchall()
+            return data
+
+    except TypeError as err:
+        print(f"Error executing query: {err}")
+        raise 
+
+    finally:
+     if cursor:
+       cursor.close()
+     if mysql:
+       connection_object.close()
 
 
 
@@ -211,8 +255,11 @@ def deteleFrom(table, column, uid):
 
 #print(mydb)
 
+#def mysql_query_commiting(query, params=None, ret=False):
 
 
+#D_Data = ("whoCares?","Who_cares_1252","112135113","male","Phnt_qz231","xz@gmail.com","123545")
+#mysql_query_commit("insert into `user` (`name`,`surname`,`added_time`,`gender`,`username`,`email`,`password`) values(%s,%s,%s,%s,%s,%s,%s)", D_Data)
 
 
 
